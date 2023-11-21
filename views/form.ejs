@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1>Add <%= title %></h1>
+    <a href="/">Go Back</a>
+    <form method="post" action="/new">
+        <div>
+            <input type="text" name="name" id="name" placeholder="Enter username" maxlength="10" autocomplete="off" required>
+            <textarea name="message" id="message" placeholder="Enter message" maxlength="60" required></textarea>
+        </div>
+        <input type="submit" value="Send">
+    </form>
+    
+</body>
+</html>

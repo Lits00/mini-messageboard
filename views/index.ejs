@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/new">Add a new message</a>
+    <ul>
+      <% posts.forEach(post => { %>
+      <li>
+        <p><span class="user"><%= `${post.user}: ` %></span><%= `${post.text}`%></p>
+        <span class="date"><%= `${post.added.toLocaleString()}` %></span>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
